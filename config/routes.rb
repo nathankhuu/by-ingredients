@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :users
   get '/recipes/show', to: 'recipes#show'
   get '/ingredients/new', to: 'ingredients#new'
+  get '/ingredients/create', to: 'ingredients#create'
+  get '/ingredients/show', to: 'ingredients#show'
   post '/ingredients/new', to: 'ingredients#create'
-  patch '/ingredients/new' => 'ingredients#show', as: 'new'
+  patch '/ingredients/new' => 'ingredients#create', as: 'create'
 end

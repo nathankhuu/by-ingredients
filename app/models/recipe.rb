@@ -11,4 +11,8 @@ class Recipe < ApplicationRecord
 	def self.for term
 		get("/search", query: { q: term})["recipes"]
 	end
+
+	def self.get_ingredients term
+		get("/get", query: { rId: 35382})
+	end
 end
