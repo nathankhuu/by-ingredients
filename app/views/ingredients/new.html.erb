@@ -1,0 +1,7 @@
+<h1>Add to your ingredients</h1>
+<div id="ingredient_form">
+  <%= simple_form_for @ingredient, url: ingredients_new_path() do |i| %>
+    <%= i.input :name %>
+    <%= i.button :submit, "Add an ingredient" %>
+  <% end %>
+</div>
